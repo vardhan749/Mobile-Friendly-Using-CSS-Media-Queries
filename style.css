@@ -1,0 +1,113 @@
+/* ===== Base Styles (Mobile First) ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 10px;
+}
+
+/* Header */
+header {
+  background: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+/* Navigation */
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+nav ul li {
+  margin: 5px 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  display: block;
+}
+
+nav ul li a:hover {
+  background: #444;
+}
+
+/* Main Content - Mobile: stacked layout */
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #f4f4f4;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+/* ===== Media Query for Tablets & Desktops ===== */
+@media (min-width: 768px) {
+  /* Navigation: horizontal */
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  /* Main layout: two columns */
+  main {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .content {
+    flex: 3;
+  }
+
+  .sidebar {
+    flex: 1;
+    margin-top: 0;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+}
+
+/* ===== Media Query for Large Screens ===== */
+@media (min-width: 1024px) {
+  body {
+    max-width: 1200px;
+    margin: auto;
+  }
+}
